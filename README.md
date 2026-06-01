@@ -2,7 +2,7 @@
 
 API REST para la gestión de cursos académicos. Construida con **Node.js**, **Express** y **SQLite**, documentada con **Swagger** y desplegada en **Render**.
 
-🔗 **API en producción:** https://cursos-api-0s42.onrender.com
+🔗 **API en producción:** https://cursos-api-0s42.onrender.com/cursos
 📖 **Documentación interactiva:** https://cursos-api-0s42.onrender.com/docs
 
 ---
