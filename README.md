@@ -71,7 +71,40 @@ La API quedará disponible en `http://localhost:3000` y la documentación en `ht
 
 ---
 
-## 🧪 Ejemplos de uso
+## 🧪 Probar la API con Thunder Client
+
+Si quieres probar los endpoints de forma cómoda desde **VS Code**, puedes instalar la extensión **Thunder Client** — funciona como Postman pero dentro del editor y sin necesidad de crear cuenta.
+
+### Instalación
+
+1. Abre VS Code y presiona `Ctrl + Shift + X` para abrir el panel de extensiones.
+2. Busca **Thunder Client** (autor: *Ranga Vadhineni*).
+3. Haz clic en **Install**.
+4. Cuando termine, aparecerá un icono de rayo ⚡ en la barra lateral izquierda — haz clic ahí para abrirlo.
+
+### Cómo usarlo
+
+1. Haz clic en **New Request**.
+2. Selecciona el método HTTP (GET, POST, PUT, DELETE).
+3. Pega la URL — por ejemplo: `http://localhost:3000/cursos` o `https://cursos-api-0s42.onrender.com/cursos`.
+4. Para POST y PUT, ve a la pestaña **Body** → **JSON** y pega el contenido del curso.
+5. Haz clic en **Send** y verás la respuesta a la derecha.
+
+### Ejemplo de Body para crear un curso (POST)
+
+```json
+{
+  "nombre": "Calculo Diferencial",
+  "instructor": "Dra. Ana Perez",
+  "creditos": 4
+}
+```
+
+> 💡 Thunder Client guarda el historial de tus requests, así que no tienes que volver a escribir las URLs cada vez.
+
+---
+
+## 🧪 Ejemplos de uso con curl
 
 ### Crear un curso
 
