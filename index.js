@@ -34,6 +34,28 @@ app.get('/cursos', (req, res) => {
 
 /**
  * @swagger
+ * /cursos/{id}:
+ *   get:
+ *     summary: Obtiene un curso por su ID
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema: { type: integer }
+ *     responses:
+ *       200:
+ *         description: Curso encontrado
+ *       404:
+ *         description: Curso no encontrado
+ */
+app.get('/cursos/:id', (req, res) => {
+  const curso = db.prepare('SELECT * FROM cursos WHERE id = ?').get(req.params.id);
+  if (!curso) return res.status(404).json({ error: 'Curso no encontrado' });
+  res.json(curso);
+});
+
+/**
+ * @swagger
  * /cursos:
  *   post:
  *     summary: Crea un nuevo curso
