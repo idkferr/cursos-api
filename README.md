@@ -1,6 +1,13 @@
-##ATENCIÓN 
-El documento titulado "Taller de Gestión de la Configuración de Software" constituye la guía metodológica y técnica central del proyecto, unificando el marco teórico formal de la ingeniería de software con la práctica ágil del desarrollo moderno. En su contenido se detalla el paso a paso operacional del flujo de trabajo GitHub Flow (basado en el aislamiento de tareas mediante ramas cortas, auditorías cruzadas a través de Pull Requests y la protección estricta de la línea base), integrando de manera orgánica los lineamientos del apartado SWEBOK 3.2 ("Desarrollo e Implementación de Cambios de Software") para garantizar la trazabilidad total desde que nace un requerimiento hasta su integración. Asimismo, el documento establece una rigurosa política de almacenamiento y SCM, clasificando de forma clara los componentes del sistema: definiendo qué archivos se resguardan bajo el control de versiones en el repositorio (código fuente, configuración y dependencias exactas), cuáles quedan estrictamente excluidos en el entorno local de runtime mediante el archivo .gitignore (como las librerías node_modules/ o la base de datos dinámica datos.db), y cómo se congela el estado del arte inmutable del software en la nube de GitHub mediante la creación de Tags semánticos y la publicación de Releases, que actúan como la Biblioteca de Software oficial del equipo.
+## 📢 ATENCIÓN
 
+El documento titulado **"Taller de Gestión de la Configuración de Software"** constituye la guía metodológica y técnica central del proyecto, unificando el marco teórico formal de la ingeniería de software con la práctica ágil del desarrollo moderno. 
+
+En su contenido se detalla el paso a paso operacional del flujo de trabajo **GitHub Flow** (basado en el aislamiento de tareas mediante ramas cortas, auditorías cruzadas a través de *Pull Requests* y la protección estricta de la línea base), integrando de manera orgánica los lineamientos del apartado **SWEBOK 3.2 ("Desarrollo e Implementación de Cambios de Software")** para garantizar la trazabilidad total desde que nace un requerimiento hasta su integración. 
+
+Asimismo, el documento establece una rigurosa **política de almacenamiento y SCM**, clasificando de forma clara los componentes del sistema:
+* **En el repositorio:** Definiendo qué archivos se resguardan bajo el control de versiones (código fuente, configuración y dependencias exactas).
+* **En el entorno local de runtime:** Cuáles quedan estrictamente excluidos mediante el archivo `.gitignore` (como las librerías `node_modules/` o la base de datos dinámica `datos.db`).
+* **En la nube de GitHub:** Cómo se congela el estado del arte inmutable del software mediante la creación de *Tags* semánticos y la publicación de *Releases*, que actúan como la Biblioteca de Software oficial del equipo.
 # 📚 API Cursos
 
 API REST para la gestión de cursos académicos. Construida con **Node.js**, **Express** y **SQLite**, documentada con **Swagger** y desplegada en **Render**.
