@@ -1,25 +1,25 @@
-# 📚 API Cursos
+# API Cursos
 
 API REST para la gestión de cursos académicos. Construida con **Node.js**, **Express** y **SQLite**, documentada con **Swagger** y desplegada en **Render**.
 
-🔗 **API en producción:** https://cursos-api-0s42.onrender.com/cursos
-📖 **Documentación interactiva:** https://cursos-api-0s42.onrender.com/docs
+- **API en producción:** https://cursos-api-0s42.onrender.com/cursos
+- **Documentación interactiva:** https://cursos-api-0s42.onrender.com/docs
 
 ---
 
-## 📑 Contenido
+## Contenido
 
-- [🚀 Tecnologías](#-tecnologías)
-- [📋 Endpoints](#-endpoints)
-- [🛠️ Parte 1: Cómo construir esta API desde cero](#️-parte-1-cómo-construir-esta-api-desde-cero)
-- [🔄 Parte 2: Flujo de Gestión de la Configuración](#-parte-2-flujo-de-gestión-de-la-configuración-swebok--github-flow)
-- [📊 Evidencia del flujo aplicado](#-evidencia-del-flujo-de-gestión-de-la-configuración-aplicado)
-- [💻 Ejecutar localmente](#-ejecutar-localmente-versión-rápida)
-- [🧪 Probar la API con Thunder Client](#-probar-la-api-con-thunder-client)
+- [Tecnologías](#tecnologías)
+- [Endpoints](#endpoints)
+- [Parte 1: Cómo construir esta API desde cero](#parte-1-cómo-construir-esta-api-desde-cero)
+- [Parte 2: Flujo de Gestión de la Configuración](#parte-2-flujo-de-gestión-de-la-configuración-swebok--github-flow)
+- [Evidencia del flujo aplicado](#evidencia-del-flujo-de-gestión-de-la-configuración-aplicado)
+- [Ejecutar localmente](#ejecutar-localmente-versión-rápida)
+- [Probar la API con Thunder Client](#probar-la-api-con-thunder-client)
 
 ---
 
-## 🚀 Tecnologías
+## Tecnologías
 
 - **Node.js v18+** — entorno de ejecución JavaScript
 - **Express** — framework web minimalista
@@ -30,7 +30,7 @@ API REST para la gestión de cursos académicos. Construida con **Node.js**, **E
 
 ---
 
-## 📋 Endpoints
+## Endpoints
 
 | Método   | Ruta            | Descripción                       |
 | -------- | --------------- | --------------------------------- |
@@ -54,7 +54,7 @@ API REST para la gestión de cursos académicos. Construida con **Node.js**, **E
 
 ---
 
-# 🛠️ Parte 1: Cómo construir esta API desde cero
+# Parte 1: Cómo construir esta API desde cero
 
 Esta guía te lleva paso a paso desde un computador vacío hasta tener la API funcionando local y deployada en Render.
 
@@ -77,8 +77,8 @@ git --version
 
 1. Entra a https://github.com → botón **`+`** arriba derecha → **New repository**
 2. **Repository name:** `cursos-api`
-3. Marca **Public** ✅
-4. Marca **Add a README file** ✅
+3. Marca **Public**
+4. Marca **Add a README file**
 5. Click en **Create repository**
 6. Botón verde **Code** → copia la URL HTTPS
 
@@ -269,7 +269,7 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`API corriendo en puerto ${PORT}`));
 ```
 
-> 🔑 La línea `const PORT = process.env.PORT || 3000` es **clave** para que la API funcione tanto local como en Render.
+> La línea `const PORT = process.env.PORT || 3000` es **clave** para que la API funcione tanto local como en Render.
 
 ## Paso 6 — Crear `.gitignore`
 
@@ -280,7 +280,7 @@ node_modules/
 datos.db
 ```
 
-> 💡 `node_modules/` se regenera con `npm install`, no se versiona. `datos.db` es estado runtime, tampoco.
+> `node_modules/` se regenera con `npm install`, no se versiona. `datos.db` es estado runtime, tampoco.
 
 ## Paso 7 — Agregar script `start` en `package.json`
 
@@ -317,7 +317,7 @@ git commit -m "feat: api crud de cursos con sqlite y swagger"
 git push origin main
 ```
 
-> 🔑 Si GitHub te pide credenciales y rechaza tu contraseña, necesitas un Personal Access Token: https://github.com/settings/tokens → Generate new token (classic) → marca `repo` → genera y úsalo como contraseña.
+> Si GitHub te pide credenciales y rechaza tu contraseña, necesitas un Personal Access Token: https://github.com/settings/tokens → Generate new token (classic) → marca `repo` → genera y úsalo como contraseña.
 
 ## Paso 10 — Deploy en Render
 
@@ -339,11 +339,11 @@ Cuando termine, Render te da una URL pública.
 
 ---
 
-# 🔄 Parte 2: Flujo de Gestión de la Configuración (SWEBOK + GitHub Flow)
+# Parte 2: Flujo de Gestión de la Configuración (SWEBOK + GitHub Flow)
 
 Esta sección demuestra cómo aplicar los conceptos de **SWEBOK Cap. 8 (Software Configuration Management)** usando **GitHub Flow**.
 
-## ⚙️ Paso 0 — Configurar protección de `main`
+## Paso 0 — Configurar protección de `main`
 
 1. Repo en GitHub → **Settings** → menú lateral **Branches**
 2. Click en **Add branch ruleset**
@@ -353,14 +353,14 @@ Esta sección demuestra cómo aplicar los conceptos de **SWEBOK Cap. 8 (Software
 6. En **Rules**, marca **Require a pull request before merging** → **Required approvals: 1**
 7. Click **Create**
 
-## 📝 Paso 1 — Crear el Issue (Solicitud de Cambio)
+## Paso 1 — Crear el Issue (Solicitud de Cambio)
 
 1. Repo → pestaña **Issues** → **New issue**
 2. **Título descriptivo** y **descripción detallada** con criterios de aceptación
 3. **Panel derecho:** asignar Assignee y Label `enhancement`
 4. **Submit new issue**
 
-## 🌿 Paso 2 — Crear una rama desde `main`
+## Paso 2 — Crear una rama desde `main`
 
 ```bash
 git checkout main
@@ -370,7 +370,7 @@ git checkout -b feature/1-get-curso-por-id
 
 > Convención: `tipo/numero-issue-descripcion-corta`
 
-## 💻 Paso 3 — Implementar el cambio
+## Paso 3 — Implementar el cambio
 
 Modifica `index.js` agregando el nuevo endpoint con su anotación Swagger.
 
@@ -379,7 +379,7 @@ Prueba localmente:
 node index.js
 ```
 
-## 💾 Paso 4 — Commit con referencia al Issue
+## Paso 4 — Commit con referencia al Issue
 
 ```bash
 git add index.js
@@ -388,13 +388,13 @@ git commit -m "feat: agregar endpoint GET /cursos/:id (#1)"
 
 > El `(#1)` enlaza el commit al Issue automáticamente.
 
-## 🚀 Paso 5 — Publicar la rama en GitHub
+## Paso 5 — Publicar la rama en GitHub
 
 ```bash
 git push origin feature/1-get-curso-por-id
 ```
 
-## 🔀 Paso 6 — Abrir el Pull Request
+## Paso 6 — Abrir el Pull Request
 
 1. En GitHub → banner amarillo **Compare & pull request**
 2. **Título** y **descripción detallada** (qué cambia, por qué, cómo probar, impacto)
@@ -402,17 +402,17 @@ git push origin feature/1-get-curso-por-id
 4. **Panel derecho:** asignar Reviewer, Assignee, Label
 5. **Create pull request**
 
-## 👀 Paso 7 — Code Review
+## Paso 7 — Code Review
 
 El revisor:
 1. Abre el PR → pestaña **Files changed**
 2. Lee el diff línea por línea
 3. Deja **al menos un comentario sustantivo**
-4. **Review changes** → **Approve** ✅ → **Submit review**
+4. **Review changes** → **Approve** → **Submit review**
 
 > Para invitar a un colaborador: Settings → Collaborators → Add people.
 
-## ✅ Paso 8 — Fusionar el PR
+## Paso 8 — Fusionar el PR
 
 Una vez aprobado:
 1. Click en **Merge pull request**
@@ -421,7 +421,7 @@ Una vez aprobado:
 
 Automáticamente: cambios a `main`, Issue cerrado, Render redeploya.
 
-## 🗑️ Paso 9 — Eliminar la rama
+## Paso 9 — Eliminar la rama
 
 ```bash
 git checkout main
@@ -429,7 +429,7 @@ git pull origin main
 git branch -d feature/1-get-curso-por-id
 ```
 
-## 🏷️ Paso 10 — Crear tag de versión
+## Paso 10 — Crear tag de versión
 
 ```bash
 git tag -a v1.1.0 -m "feat: agregar endpoint GET /cursos/:id"
@@ -438,15 +438,15 @@ git push origin v1.1.0
 
 > **SemVer:** MAYOR.MENOR.PARCHE — funcionalidad nueva compatible → sube MENOR.
 
-## 📦 Paso 11 — Publicar Release
+## Paso 11 — Publicar Release
 
 1. Repo → panel derecho → **Releases** → **Draft a new release**
 2. **Choose a tag:** `v1.1.0`
 3. **Release title** y notas detalladas
-4. ✅ **Set as the latest release**
+4. **Set as the latest release**
 5. **Publish release**
 
-## 🎯 Mapeo SWEBOK → GitHub Flow
+## Mapeo SWEBOK → GitHub Flow
 
 | Concepto SWEBOK Cap. 8 | GitHub Flow |
 |---|---|
@@ -464,7 +464,7 @@ git push origin v1.1.0
 
 ---
 
-## 📊 Evidencia del flujo de Gestión de la Configuración aplicado
+## Evidencia del flujo de Gestión de la Configuración aplicado
 
 Este repositorio fue construido siguiendo el flujo de **GitHub Flow** aplicando los procesos de **Software Configuration Management (SWEBOK Cap. 8)**.
 
@@ -480,7 +480,7 @@ Este repositorio fue construido siguiendo el flujo de **GitHub Flow** aplicando 
 | Versionado | @idkferr | Tag `v1.1.0` (Semantic Versioning) |
 | Release | @idkferr | [Release v1.1.0](https://github.com/idkferr/cursos-api/releases) |
 
-### 📌 Nota sobre el ejecutor del merge
+### Nota sobre el ejecutor del merge
 
 En el flujo aplicado, **el merge fue ejecutado por la autora del PR (@idkferr) tras recibir la aprobación formal de la revisora (@Uribe22)**. Esta es una práctica aceptada en muchos equipos ágiles, donde la **aprobación del revisor** constituye la garantía de control de calidad, independientemente de quién ejecute el merge técnico.
 
@@ -490,7 +490,7 @@ En contextos donde se requiera estricta separación de roles (autor ≠ ejecutor
 
 ---
 
-## 💻 Ejecutar localmente (versión rápida)
+## Ejecutar localmente (versión rápida)
 
 ```bash
 git clone https://github.com/idkferr/cursos-api.git
@@ -504,7 +504,7 @@ npm start
 
 ---
 
-## 🧪 Probar la API con Thunder Client
+## Probar la API con Thunder Client
 
 [Thunder Client](https://www.thunderclient.com) es una extensión de VS Code que funciona como Postman pero dentro del editor.
 
@@ -513,7 +513,7 @@ npm start
 1. VS Code → `Ctrl + Shift + X`
 2. Buscar **Thunder Client** (autor: *Ranga Vadhineni*)
 3. Click en **Install**
-4. Aparecerá un ícono de rayo ⚡ en la barra lateral
+4. Aparecerá un ícono de rayo en la barra lateral
 
 ### Cómo usarlo
 
@@ -535,7 +535,7 @@ npm start
 
 ---
 
-## 📁 Estructura del proyecto
+## Estructura del proyecto
 
 ```
 cursos-api/
@@ -549,7 +549,7 @@ cursos-api/
 
 ---
 
-## ☁️ Despliegue continuo
+## Despliegue continuo
 
 La API se despliega automáticamente en **Render** con cada `push` a la rama `main`. Cada vez que se fusiona un Pull Request, Render detecta el cambio y redeploya en 2-3 minutos.
 
@@ -557,6 +557,6 @@ La API se despliega automáticamente en **Render** con cada `push` a la rama `ma
 
 ---
 
-## 📝 Licencia
+## Licencia
 
 Proyecto académico desarrollado en el curso de **Proyectos de Software** — Universidad de Valparaíso.
